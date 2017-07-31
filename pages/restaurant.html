@@ -1,0 +1,108 @@
+<div class="restaurant" ng-controller="restaurantController">
+	<div ng-if="restaurant.name">
+		<nav class="navbar navbar-default navbar-fixed">
+		    <div class="container-fluid">
+		        <!-- Brand and toggle get grouped for better mobile display -->
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		              	<span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		   	            <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand" href="#">Foodie</a>
+		        </div>
+		        <!-- Collect the nav links, forms, and other content for toggling -->
+		        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		            <ul class="nav navbar-nav navbar-right">
+		                <li><a href="#!/home">Home</a></li>
+		                <li><a href="#">About</a></li>
+		                <li><a href="#">Order Online</a></li>
+		               	<li><a href="#!/">Logout</a></li>
+		            </ul>
+		      	</div>
+		   	<!-- /.navbar-collapse -->
+		    </div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<div class="restro_page">
+			<img src="{{restaurant.image}}" height="350" width="1160">
+			<div class="rp_main">
+				<div class="rp_title">
+					<div class="rp_name bold red">
+						{{restaurant.name}}
+					</div>
+					<div class="rp_rating ">
+						<div class="rp_ratingBox">{{restaurant.vote}}</div>
+					</div>
+				</div>
+				<div class="rp_cate gray margin_up font_2r ">
+					{{restaurant.category}} | {{restaurant.location}}
+				</div>
+				<div class="rp_buttons">
+					
+				</div>
+			</div>
+			<div class="rp_overview  margin_up">
+				<!-- <h1>Overview</h1> -->
+
+				<div class="rp_overview_left">
+					<div class="bold font_2r ">Phone number</div>
+					<div class="green bold font_2r ">{{restaurant.phno}}</div>
+					<div class="gray">Table booking for Groups</div>
+
+					<div class="bold margin_up font_2r ">Cuisines</div>
+					<div class="red">{{restaurant.cuisines}}</div>
+
+					<div class="bold margin_up font_2r ">Cost</div>
+					<div class="gray">AVERAGE</div>
+					<div>₹{{restaurant.cost | number}} for two people (approx.)</div>
+					<div class="gray">Exclusive of applicable taxes and charges, if any </div>
+					<div class="gray  margin_up">Cash and Cards accepted</div>
+				</div>
+				<div class="rp_overview_mid">
+					<div class="bold font_2r ">Opening hours</div>
+					<div class="bold gray">{{restaurant.hours}}</div>
+					<div class="bold  margin_up font_2r ">Address</div>
+					<div class="gray">{{restaurant.address}}</div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="rp_overview_right">
+					
+				</div>
+			</div>
+			<div class="bestDish margin_up font_2r" ng-if="restaurant.bestDish">
+					<span class="bold red">BEST DISH</span>
+					<span>(recommended):</span>
+					<span class="gray bold">{{restaurant.bestDish.name}} </span>
+		        	<div ng-click="getIngredients(restaurant.bestDish.image)" class="button">Get Ingredients</div> 
+		        	<!-- here we are adding onclick by using ng-click and onclick getIngredents fuction will be called and image url that we have stored in object will be passed as argument-->
+		        	<div class="ingredients" ng-if="ingredients"> <!-- this div will be shown we ingredients have some value -->
+					    <ol>
+					    <li ng-repeat="ingredient in ingredients" class="gray"> <!-- here each and every value of ingredients array will be shown like forEach loop -->
+					    {{ingredient}}
+					    </li>
+					    </ol>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- this div will be shown when no restro to show(404 Error)-->
+	<div class="error404" ng-hide="restaurant.name">
+	<img src="/img/404img.jpg" id="bg" alt="">
+	<span>
+		<h1 class="bold" style="font-size: 15rem;">404</h1>
+		<h1 class="bold">SOMETIMES BEING EMPTY IS NOT BAD</h1>
+		<h3>SORRY, THE PAGE YOU ARE LOOKING FOR CAN NOT BE FOUND</h3>
+		<h4 class="margin_up">Maybe you will find better alternatives visiting our main collections</h4>
+		<button id="btn1_404">Contact Us</button>
+		<a href="#!/home" id="col_white"><button id="btn2_404">Go Home</button></a>
+	</span>
+	</div>
+</div>
+
+
+

@@ -1,0 +1,58 @@
+<div class="main" ng-controller="shoppingController">
+ 		<nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Foodie</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#!/home">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#!/shopping">Shopping List</a></li>
+                        <li><a href="#!/">Logout</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div class="shopping">
+        	<div class="input-bar">
+                <form>
+  	              <div class="input-wrapper">
+    	              <input type="url" class="form-control" placeholder="Enter image url" ng-model="urlQuery">
+               	 </div>
+				<button type="submit" class="btn btn-default" ng-click="getIngredients(urlQuery)">Submit</button>
+                </form>
+            </div>
+        
+	        <div class="itemList" ng-show="todoList.length > 0">
+		 		
+		 		<div class="itemAll"><h4 class="bold">All items</h4>
+					<div ng-repeat="x in todoList">
+					    <input type="checkbox" ng-model="x.done" ng-click="checkBoxClick(x)"><span ng-bind="x.todoText"></span>
+					</div>
+				</div>
+				
+				<div class="itemCheck green"><h4 class="bold green">Checked Items</h4>
+					<div ng-repeat="x in todoList" ng-show="x.done">
+					    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+					</div>
+				</div>
+
+				<div class="itemUncheck red"><h4 class="bold red">Unchecked Items</h4>
+					<div ng-repeat="x in todoList" ng-show="!x.done">
+					    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+					</div>
+				</div>	
+			</div>   
+        </div>
+ 

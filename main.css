@@ -1,0 +1,375 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F3E8;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.hero {
+    background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
+    background-size: cover;
+    min-height: 300px;
+    border-radius: 4px;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .navbar {
+    color: white;
+    background-color: #cb202d;
+}
+
+#app .navbar a {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#app .login {
+    background-color: #cb202d;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .login-form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 1rem;
+    padding-top: 0;
+    border-radius: 4px;
+}
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid red;
+}
+
+.restro {
+    width: 600px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+ .restro_header,.restro_mid {
+    display: flex;
+    flex-direction: row
+    width: 100%;
+}
+
+.restro_header {
+    border-bottom: solid 1px #89959B; 
+    padding-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.restro_mid {
+    margin-top: 10px;
+}
+
+.restro_img {
+    width: 22%;
+}
+
+.restro_info {
+    width: 71%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.restro_rating {
+    width: 7%;
+}
+
+.restro_mid_left {
+    font-size: 12.5px;
+    color: #89959B;
+}
+
+.restro_mid_right {
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.restro_img img{
+    height: 100px;
+    width: 105px;
+    border-radius: 5%; 
+}
+
+.restro_cate {
+    color: #89959B;
+    font-size: 14px;
+}
+
+.restro_name {
+    color: #cb202d;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.restro_name a {
+    color: #cb202d;
+    text-decoration: none;
+}
+
+.restro_name a:hover {
+    opacity: .7;
+}
+
+.restro_loc {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.restro_add {
+    color: #89959B;
+    font-size: 15px;
+}
+
+.restro_rating {
+    background-color: #5BA829;
+    text-align: center;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    height: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.search-bar {
+    width: 600px;
+    margin: 2rem auto;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar form .input-wrapper {
+   flex: 1;
+   margin-right: 1rem;
+}
+
+.restro_page {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    padding: 2rem;   
+}
+
+.rp_main {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 1%;
+}
+
+.rp_title {
+    display: flex;
+    flex-direction: row;
+    width: 1160px;
+}
+
+.rp_name {
+    width: 93%;
+    font-size: 5rem;
+}
+
+.rp_rating {
+    text-align: right;
+}
+
+.rp_ratingBox {
+    margin-top: auto; 
+    margin-bottom: auto;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    border-radius: 10%;
+    font-size: 2rem;
+}
+
+.rp_buttons {
+
+}
+
+.rp_overview {
+    display: flex;
+    flex-direction: row;
+    width: 1160px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 1%;
+}
+
+.rp_overview_left {
+    width: 33%;
+}
+
+.rp_overview_mid {
+    width: 34%;
+}
+
+.rp_overview_left {
+    width: 33%;
+}
+
+.red {
+    color: #cb202d;
+}
+
+.gray {
+    color: #89959B;
+}
+
+.green {
+    color: #5BA829
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.margin_up {
+    margin-top: 20px;
+}
+
+.font_2r {
+    font-size: 2rem;
+}
+
+.error404 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error404 span {
+    z-index:  2;
+    position:absolute;
+    top: 150px;
+    color: white;
+}
+
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1;
+  min-width: 100%;
+  max-height: 100%;
+}
+
+#btn1_404,#btn2_404 {
+    background: #5BA829;
+    border: 1px white solid;
+    margin-top: 40px;
+    font-size: 25px;
+    border-radius: 5%;
+    margin-right: 40px;
+    outline: 0;
+    width: 160px;
+    height: 40px;
+    transition: border-width 1s;
+}
+
+#btn1_404:hover ,#btn2_404:hover{
+    box-shadow: 0 12px 16px 0 rgba(255,255,255,0.24), 0 17px 50px 0 rgba(255,255,255,0.19);
+    border-width: 2px;
+}
+
+#col_white {
+    color: white !important;
+}
+
+.bestDish .button {
+    display: inline-block;
+    background-color:#cb202d;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.bestDish {
+    background-color:white;
+    width: 100%;
+    padding: 20px;
+}
+
+.shopping {
+    width: 1200px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    padding: 2rem;  
+    background-color: white; 
+}
+
+.input-bar {
+    width: 600px;
+    margin: 2rem auto;
+}
+
+.input-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.input-bar form .input-wrapper {
+   flex: 1;
+   margin-right: 1rem;
+}
+
+.itemList {
+    width: 100%;
+    border-top: 1px solid #89959B;
+    border-bottom: 1px solid #89959B;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.itemAll,.itemCheck,.itemUncheck {
+    width: 33.33%;
+    border-right: 1px solid #89959B;
+    border-left: 1px solid #89959B;
+    padding-left: 15px;
+}
+
+.itemList input {
+    margin-top: 10px;
+    margin-right: 3px;
+}
